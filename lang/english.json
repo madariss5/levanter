@@ -7,7 +7,7 @@
     "connecting": "[{0}] Connecting...",
     "connected": "[{0}] Connected {1}",
     "instance_close": "[{0}] Connection closed",
-    "instance_restart": "[{0}] Instance Restarting...`",
+    "instance_restart": "[{0}] Instance Restarting...",
     "reconnect": "[{0}] reconnecting...({1})",
     "reconnect_after": "[{0}] reconnect after 1 minutes",
     "another_login": "[{0}] session logined on another device.",
@@ -52,8 +52,9 @@
     "antilink": {
       "desc": "Enable or configure anti-link",
       "disable": "_Antilink is already disabled._",
+      "antilink_notset": "Antilink has not been configured.",
       "status": "Antilink is now *{0}*.",
-      "info": "`> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
+      "info": "> Antilink Status: {0}\n*Allowed URLs:* {1}\n *Action :* {2}",
       "action_invalid": "*Invalid action specified.*",
       "action_update": "Antilink action updated to: *{0}*",
       "update": "> Antilink Updated\n*Allowed:* {0}\n*Not Allowed:* {1}",
@@ -61,7 +62,7 @@
     },
     "antiword": {
       "desc": "Filter specific words in the group chat",
-      "example": "`AntiWord Status: {0}\n> *Usage Examples:*\n- antiword action/<kick | warn | null>* - Set action for violations\n- antiword on | off - Enable/Disable word filtering\n- setvar ANTIWORDS:word1,word2,... - Define blocked words",
+      "example": "AntiWord Status: {0}\n> *Usage Examples:*\n- antiword action/<kick | warn | null>* - Set action for violations\n- antiword on | off - Enable/Disable word filtering\n- setvar ANTIWORDS:word1,word2,... - Define blocked words",
       "action_update": "AntiWord action updated to: *{0}*",
       "status": "AntiWord is now *{0}*."
     },
@@ -102,7 +103,7 @@
     },
     "filter": {
       "desc": "Manage filters in groups",
-      "example": "_No filters set._\n> *Example:*\n- filter hi (while replying a text message)\n- filter list (Shows current filters)",
+      "example": "> *Example:*\n- filter hi (while replying a text message)\n- filter list (Shows current filters)",
       "list": "> *Current Filters:*\n{0}",
       "filter_add": "*{0}* filter added"
     },
@@ -134,12 +135,12 @@
     },
     "gfilter": {
       "desc": "Manage global filters in groups",
-      "example": "_Not set any gfilter_\n> *Example :*\n- gfilter hi (while replying to a text message)\n- gfilter list (Shows current gfilters)",
+      "example": "> *Example :*\n- gfilter hi (while replying to a text message)\n- gfilter list (Shows current gfilters)",
       "add": "*{0}* gfilter added"
     },
     "pfilter": {
       "desc": "Manage global filters in personal chats",
-      "example": "_Not set any pfilter_\n> *Example :*\n- pfilter hi (while replying to a text message)\n- pfilter list (Shows current pfilters)",
+      "example": "> *Example :*\n- pfilter hi (while replying to a text message)\n- pfilter list (Shows current pfilters)",
       "add": "*{0}* pfilter added"
     },
     "gpp": {
@@ -383,7 +384,6 @@
       "not_found": "Movie not found. Please verify the title and try again.",
       "desc": "Fetch detailed movie information, including the full plot, from the OMDB API."
     },
-
     "msgs": {
       "desc": "Display the group's message count for each member, including individual totals and last seen duration.",
       "msg_init": "\n*Number :* {0}\n*Name :* {1}\n*Total Msgs :* {2}\n",
@@ -458,13 +458,12 @@
       "not_found": "No media found. Please check the URL and try again.",
       "desc": "Download Pinterest videos or images."
     },
-
     "plugin": {
       "usage": "> Example:\n- plugin <Gist URL>\n- plugin list",
       "desc": "Install external plugins by providing a Gist URL containing the plugin code, or list all installed plugins.",
       "invalid": "Please provide a valid plugin URL or plugin name.",
       "not_installed": "No plugins are currently installed.",
-      "installed": "Newly installed plugins: {plugin_names}"
+      "installed": "Newly installed plugins: {0}"
     },
     "remove": {
       "usage": "> Example:\b- remove <plugin_name>\n- remove all",
@@ -476,7 +475,6 @@
       "desc": "Restart the bot instance using PM2.",
       "starting": "Restarting..."
     },
-
     "fullpp": {
       "usage": "Example: fullpp (reply to an image)",
       "desc": "Set full-size profile picture.",
@@ -551,7 +549,6 @@
       "not_found": "Schedule not found.",
       "deleted": "_Schedule deleted._"
     },
-
     "setstatus": {
       "usage": "Example: setstatus jid,jid,jid,... OR setstatus contact",
       "desc": "Set a WhatsApp status for specific contacts or for imported contacts. Reply to a message (text, image, or video) to set the status.",
@@ -567,7 +564,6 @@
       "list": "Scheduled status list:",
       "deleted": "Schedule deleted."
     },
-
     "antispam": {
       "usage": "Usage: antispam on | off",
       "desc": "Enable or disable the AntiSpam feature for the group.",
@@ -646,7 +642,6 @@
       "usage": "Example: url OR url imgur (reply to an image or video)",
       "desc": "Convert an image or video to a URL. Optionally, specify a parameter (e.g., 'imgur') to get the URL from a specific service."
     },
-
     "getvar": {
       "usage": "Example: getvar sudo",
       "desc": "Display the value of a variable. Provide the variable key (case-insensitive) to retrieve its value.",
@@ -679,7 +674,6 @@
       "vote_deleted": "_Vote deleted._",
       "voted": "@{0} voted for {1}\n\n${2}"
     },
-
     "warn": {
       "usage": "Example: warn @user OR warn reset @user. You can also reply to a user's message and type 'warn' or 'warn reset'.",
       "desc": "Warn a user in the group chat. This command increases a user's warning count. If the count exceeds the limit, the user will be kicked from the group. Use 'warn reset' to clear a user's warnings.",
